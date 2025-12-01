@@ -155,7 +155,6 @@ async function submit () {
                 v-if="qrcodeData"
                 :src="qrcodeData"
                 alt="QR Code"
-                :style="{ width: width + 'px', height: width + 'px' }"
               />
               <div
                 v-else
