@@ -106,18 +106,32 @@ async function submit () {
           <div class="d-flex flex-column gap-2">
             <v-color-input
               v-model="darkColor"
-              label="Dark"
+              label="QR Color"
               hide-details="auto"
-              :color-pip="true"
+              :hide-pip="true"
               :hide-actions="true"
-            />
+            >
+            <template #append-inner>
+              <v-avatar 
+                :color="darkColor"
+                size="24"
+              />
+            </template>
+          </v-color-input>
             <v-color-input
               v-model="lightColor"
-              label="Light"
+              label="Background"
               hide-details="auto"
-              :color-pip="true"
+              :hide-pip="true"
               :hide-actions="true"
-            />
+            >
+            <template #append-inner>
+              <v-avatar 
+                :color="lightColor"
+                size="24"
+              />
+            </template>
+          </v-color-input>
           </div>
         </div>
 
